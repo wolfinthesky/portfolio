@@ -10,6 +10,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='7' fill='%23c8562b'/&gt;&lt;text x='16' y='22' font-family='Helvetica,Arial,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'&gt;SW&lt;/text&gt;&lt;/svg&gt;">
 <title>Stephen Wolf · Design Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#1b1b1e; --paper:#ffffff; --mute:#6a6a70; --line:#e7e4df;
@@ -22,6 +25,7 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
     line-height:1.6;-webkit-font-smoothing:antialiased}
   h1,h2,h3{line-height:1.15;font-weight:700;letter-spacing:-0.01em}
+  h1,h2,.num b{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.01em}
   a{color:var(--accent);text-decoration:none}
   img{max-width:100%;display:block;height:auto}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
@@ -34,7 +38,7 @@
   nav .name{font-weight:700;letter-spacing:-.01em}
   nav .links a{color:var(--ink);margin-left:1.4rem;font-size:.92rem;font-weight:500}
   nav .links a:hover{color:var(--accent)}
-  @media(max-width:640px){nav .links a{margin-left:1rem;font-size:.82rem}}
+  @media(max-width:640px){nav .links{display:none}}
 
   /* hero */
   .hero{padding:76px 0 48px}
@@ -90,7 +94,6 @@
   .card{padding:0;background:transparent}
   .card h3{font-size:1.05rem;margin:.1rem 0 .5rem}
   .card p{margin:0 0 .6rem;color:var(--mute);font-size:.94rem}
-  .card .status{font-size:.78rem;font-weight:600;color:var(--accent)}
   @media(max-width:760px){.cards{grid-template-columns:1fr}}
 
   /* ai-native process strip (full content width, under the cards) */
@@ -109,7 +112,12 @@
 
   /* comics */
   .comics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
-  .comics img{border-radius:8px;border:1px solid var(--line)}
+  .comics img{border-radius:8px;border:1px solid var(--line);cursor:zoom-in}
+  .lightbox{position:fixed;inset:0;background:rgba(20,20,22,.88);display:none;
+    align-items:center;justify-content:center;z-index:50;padding:24px;cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(92vw,900px);max-height:88vh;width:auto;border-radius:10px;
+    box-shadow:0 20px 50px rgba(0,0,0,.4)}
 
   /* stacked full-width images within a chapter */
   .imgstack{display:grid;grid-template-columns:1fr;gap:12px;margin-top:.6rem}
@@ -145,7 +153,7 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Design leader · San Jose, CA</p>
+      <p class="eyebrow">San Jose, CA</p>
       <h1>Maker.<br>Design leader.<br>People person.</h1>
       <p class="lede">Creating safe spaces is good for business. Taking on well-defined problems with creative confidence drives great customer outcomes.</p>
       <p class="sub">With twenty years as a leader, my teams and I have designed B2B, SaaS, and AI-native products and platforms across diverse enterprise landscapes. Inspired by research, guided by systems thinking, driven by high-standards, supercharged by AI. Always coming back to collaboration as the key that unlocks innovation.</p>
@@ -186,7 +194,7 @@
 <!-- FLAGSHIP -->
 <section class="block flag" id="trend-to-product">
   <div class="wrap">
-    <span class="tag">Flagship case study</span>
+    <span class="tag">GENAI IN THE PRODUCT</span>
     <h2>Trend-to-Product</h2>
     <p class="lead"><span class="kicker">Fashion transformation.</span> An AI and generative-AI toolset that compressed the product-development cycle from 47 weeks to 12, giving fashion designers agency with AI, and Walmart a competitive edge providing fashion for the whole family.</p>
     <p class="meta">Role: Director of International UX. Set the experience vision and operating model; led the embedded research and design practice that shaped it.</p>
@@ -202,18 +210,18 @@
       </figure>
       <figure class="wide">
         <img width="1516" height="849" src="assets/ttp-results.png" loading="lazy" alt="Trend-to-Product outcomes">
-        <figcaption><br></figcaption>
+        <figcaption><b>Results.</b> Outcomes from the toolset, as covered in Walmart's April 2025 feature below.</figcaption>
       </figure>
     </div>
 
-    <p class="provenance">Walmart published a piece on Trend-to-Product in April 2025.&nbsp;<a href="https://corporate.walmart.com/news/2025/04/09/in-an-ever-changing-environment-walmart-uses-genai-to-create-cool-for-customers" target="_blank" rel="noopener">Read the announcement →</a></p>
+    <p class="provenance">"In an Ever-Changing Environment, Walmart Uses GenAI To Create Cool for Customers."&nbsp;<a href="https://corporate.walmart.com/news/2025/04/09/in-an-ever-changing-environment-walmart-uses-genai-to-create-cool-for-customers" target="_blank" rel="noopener">Read the announcement →</a></p>
   </div>
 </section>
 
 <!-- AI-NATIVE PRACTICE -->
 <section class="block" id="ai-native">
   <div class="wrap">
-    <p class="eyebrow">THE MANY WAYS OF WORKING WITH AI</p>
+    <p class="eyebrow">AI ACCELERATES DISCOVERY &amp; DESIGN DELIVERY</p>
     <h2>People at the wheel. AI in the loop</h2>
     <p class="lead">From AI-powered experiences like Trend-to-Product, to design sprints that accelerate synthesis of input from stakeholders, then generate MVP prototypes for engineering to build, I've put AI into the loop of how my teams craft the next generation of enterprise software tools.</p>
     <div class="cards">
@@ -236,7 +244,7 @@
 <!-- SELECTED WORK -->
 <section class="block" id="work">
   <div class="wrap">
-    <p class="eyebrow">Selected work</p>
+    <p class="eyebrow">DELIVERY HIGHLIGHTS</p>
     <h2>Enterprise scale with a human touch</h2>
     <p class="lead">Product design crafted in collaboration with customers and end users. Service design blueprints that connected workflows across multiple platform capabilities to enable automation. All enabled by building deep relationships to align product, engineering, data science, marketing and field representatives on delivering shared outcomes.</p>
 
@@ -278,9 +286,9 @@
         <p class="role">Senior Design Manager, Customer Experience · 2010–2012</p>
         <p>Co-founded a customer experience function for the 330M annual visitors to Yahoo! Help. Built their first NLP-powered voice-of-the-customer program. Used comics to communicate behavioral insights&nbsp; that prioritized first-contact resolution to drive&nbsp;<span style="font-size: 15.36px;">strategic change.</span></p>
         <div class="comics">
-          <img width="202" height="176" src="assets/comic-1.png" loading="lazy" alt="User comic panel">
-          <img width="264" height="173" src="assets/comic-2.png" loading="lazy" alt="User comic panel">
-          <img width="249" height="174" src="assets/comic-3.png" loading="lazy" alt="User comic panel">
+          <img width="202" height="176" src="assets/comic-1.png" loading="lazy" alt="User comic panel" data-enlarge>
+          <img width="264" height="173" src="assets/comic-2.png" loading="lazy" alt="User comic panel" data-enlarge>
+          <img width="249" height="174" src="assets/comic-3.png" loading="lazy" alt="User comic panel" data-enlarge>
         </div>
       </div>
 
@@ -309,14 +317,19 @@
   </div>
 </footer>
 
-
-
-
-
-
-
-
-
-
-
+<div class="lightbox" id="lightbox"><img id="lightbox-img" src="" alt=""></div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lightbox-img');
+  document.querySelectorAll('[data-enlarge]').forEach(function(img){
+    img.addEventListener('click', function(){
+      lbImg.src=img.src; lbImg.alt=img.alt; lb.classList.add('open');
+    });
+  });
+  lb.addEventListener('click', function(){ lb.classList.remove('open'); lbImg.src=''; });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape'){ lb.classList.remove('open'); lbImg.src=''; }
+  });
+})();
+</script>
 </body></html>
