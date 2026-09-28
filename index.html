@@ -12,11 +12,10 @@
 <title>Stephen Wolf · Design Leader</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#1b1b1e; --paper:#ffffff; --mute:#6a6a70; --line:#e7e4df;
-    --accent:#c8562b; --accent-soft:#f4ece7; --band:#17171a;
+    --accent:#0A7FFB; --accent-soft:#f4ece7; --band:#17171a;
     --max:1080px;
   }
   *{box-sizing:border-box}
@@ -25,7 +24,6 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
     line-height:1.6;-webkit-font-smoothing:antialiased}
   h1,h2,h3{line-height:1.15;font-weight:700;letter-spacing:-0.01em}
-  h1,h2,.num b{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.01em}
   a{color:var(--accent);text-decoration:none}
   img{max-width:100%;display:block;height:auto}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
@@ -67,15 +65,16 @@
   /* sections */
   section.block{padding:64px 0;border-bottom:1px solid var(--line)}
   section.block h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:.2rem 0 .5rem}
-  .kicker{color:var(--accent);font-weight:600}
+  .kicker{color:#0A7FFB;font-weight:600}
   .lead{font-size:1.12rem;max-width:60ch;color:var(--ink)}
   .meta{color:var(--mute);font-size:.92rem;margin-top:.4rem}
 
   /* flagship */
   .flag{background:rgba(244,236,231,0.8)}
   #work{background:rgba(255,251,241,0.8)}
-  .tag{display:inline-block;background:var(--accent);color:#fff;font-size:.72rem;font-weight:700;
+  .tag{display:inline-block;background:#0A7FFB;color:#fff;border:1px solid #0A7FFB;font-size:.72rem;font-weight:700;
     letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:14px}
+  .tag.outline{background:transparent;border-color:#fff;color:#fff}
   .ttp-figs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
   .ttp-figs figure{margin:0}
   .ttp-figs img{border-radius:10px;border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.08)}
@@ -181,7 +180,7 @@
 
 <div class="band">
   <div class="wrap">
-    <p class="eyebrow">Wolf by THE numbers</p>
+    <span class="tag outline">Wolf by THE numbers</span>
     <div class="nums">
       <div class="num"><b>$160B</b><span>Scope of the Global Sourcing platform my team designed at Walmart</span></div>
       <div class="num"><b>442</b><span>Customers interviewed one-on-one to drive product innovation and de-risk adoption</span></div>
@@ -221,7 +220,7 @@
 <!-- AI-NATIVE PRACTICE -->
 <section class="block" id="ai-native">
   <div class="wrap">
-    <p class="eyebrow">AI ACCELERATES DISCOVERY &amp; DESIGN DELIVERY</p>
+    <span class="tag">AI ACCELERATES DISCOVERY &amp; DESIGN DELIVERY</span>
     <h2>People at the wheel. AI in the loop</h2>
     <p class="lead">From AI-powered experiences like Trend-to-Product, to design sprints that accelerate synthesis of input from stakeholders, then generate MVP prototypes for engineering to build, I've put AI into the loop of how my teams craft the next generation of enterprise software tools.</p>
     <div class="cards">
@@ -244,7 +243,7 @@
 <!-- SELECTED WORK -->
 <section class="block" id="work">
   <div class="wrap">
-    <p class="eyebrow">DELIVERY HIGHLIGHTS</p>
+    <span class="tag">DELIVERY HIGHLIGHTS</span>
     <h2>Enterprise scale with a human touch</h2>
     <p class="lead">Product design crafted in collaboration with customers and end users. Service design blueprints that connected workflows across multiple platform capabilities to enable automation. All enabled by building deep relationships to align product, engineering, data science, marketing and field representatives on delivering shared outcomes.</p>
 
